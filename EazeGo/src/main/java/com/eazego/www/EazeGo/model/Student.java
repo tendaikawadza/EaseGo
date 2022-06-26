@@ -14,21 +14,22 @@ public class Student implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(nullable=false,updatable=false)
-	private String id;
+	private Long id;
 	private String name;
 	private String surname;
 	private int phone;
-	public Student(String id, String name, String surname, int phone) {
+	
+	public Student(Long id, String name, String surname, int phone) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
 		this.phone = phone;
 	}
-	public String getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getName() {
